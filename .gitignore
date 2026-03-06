@@ -1,0 +1,4 @@
+# Local-only helper files
+.env
+.env.*
+!.env.example
