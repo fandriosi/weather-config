@@ -2,7 +2,7 @@ spring:
   application:
     name: Sistema de estacao meteorologica
   datasource:
-    url: jdbc:postgresql://localhost:5432/weather
+    url: jdbc:postgresql://db-weather-iot.codgq4k4s7k8.us-east-1.rds.amazonaws.com:5432/weather
     driverClassName: org.postgresql.Driver
     username: ${RDSUSER}
     password: ${RDSPASSWORD}
