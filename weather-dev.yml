@@ -1,3 +1,4 @@
+# Perfil de desenvolvimento
 spring:
   application:
     name: Sistema de estacao meteorologica
@@ -26,7 +27,7 @@ app:
   security:
     jwt:
       secret: ${APP_SECURITY_JWT_SECRET}
-      expiration-minutes: 60
+      expiration-minutes: ${APP_SECURITY_JWT_EXPIRATION_MINUTES:60}
   iot:
     ingest:
       max-skew-seconds: 300
@@ -37,8 +38,7 @@ app:
     region: us-east-1
     payload-reserved-keys: idEstacao,timestamp,tenant_id
     payload-ignore-prefixes: ""
-    table-name: WeatherMensuracao
-
+    table-name: WetherMensurement
 management:
   endpoints:
     web:

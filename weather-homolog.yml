@@ -1,8 +1,9 @@
+# Perfil de homologação
 spring:
   application:
     name: Sistema de estacao meteorologica
   datasource:
-    url: jdbc:postgresql://localhost:5432/weather
+    url: jdbc:postgresql://homolog-db:5432/weather_homolog
     driverClassName: org.postgresql.Driver
     username: ${RDSUSER}
     password: ${RDSPASSWORD}
@@ -20,7 +21,6 @@ spring:
       max-request-size: 100MB
 
 app:
-  name: weather
   tenancy:
     default-tenant-id: public
   security:
