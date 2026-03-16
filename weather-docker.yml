@@ -46,4 +46,4 @@ management:
         include: health,info,refresh
   endpoint:
     health:
-      show-details: never
+      show-details: always
