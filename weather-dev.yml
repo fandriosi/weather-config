@@ -7,10 +7,15 @@ spring:
     driverClassName: org.postgresql.Driver
     username: ${RDSUSER}
     password: ${RDSPASSWORD}
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    open-in-view: false
+    jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
   flyway:
     enabled: true
     baseline-on-migrate: true
