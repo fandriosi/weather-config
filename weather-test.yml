@@ -1,4 +1,3 @@
-
 # Perfil de desenvolvimento
 db:
   migration:
@@ -15,6 +14,9 @@ spring:
     hibernate:
       ddl-auto: validate
     open-in-view: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
   flyway:
     enabled: true
     baseline-on-migrate: true
@@ -50,4 +52,3 @@ management:
   endpoint:
     health:
       show-details: never
-
