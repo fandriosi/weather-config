@@ -1,0 +1,53 @@
+db:
+  migration:
+    location: classpath:db/migration
+spring:
+  application:
+    name: Sistema de estacao meteorologica
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+app:
+  name: weather
+  tenancy:
+    default-tenant-id: public
+  security:
+    jwt:
+      secret: ${APP_SECURITY_JWT_SECRET}
+      expiration-minutes: ${APP_SECURITY_JWT_EXPIRATION_MINUTES:60}
+  iot:
+    ingest:
+      max-skew-seconds: 300
+      hmac-secret: ${APP_IOT_INGEST_HMAC_SECRET}
+  cors:
+    allow-credentials: false
+  dynamodb:
+    region: us-east-1
+    payload-reserved-keys: idEstacao,timestamp,tenant_id
+    payload-ignore-prefixes: ""
+    table-name: WetherMensurement
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,refresh
+  endpoint:
+    health:
+      show-details: never
