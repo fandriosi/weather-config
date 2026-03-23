@@ -22,7 +22,7 @@ spring:
 
 app:
   tenancy:
-    default-tenant-id: public
+    default-tenant-id: sensitec-cloud
   security:
     jwt:
       secret: ${APP_SECURITY_JWT_SECRET}
