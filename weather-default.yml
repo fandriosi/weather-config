@@ -5,10 +5,10 @@ spring:
   application:
     name: Sistema de estacao meteorologica
   datasource:
-    url: jdbc:postgresql://localhost:5433/postgres
+    url: jdbc:postgresql://localhost:5432/weather
     driverClassName: org.postgresql.Driver
-    username: postgres
-    password: postgres
+    username: ${RDSUSER}
+    password: ${RDSPASSWORD}
   jpa:
     hibernate:
       ddl-auto: validate
