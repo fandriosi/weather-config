@@ -42,7 +42,9 @@ app:
     region: us-east-1
     payload-reserved-keys: idEstacao,timestamp,tenant_id
     payload-ignore-prefixes: ""
-    table-name: WetherMensurement
+    tables:
+       alarm-config: AlarmConfig
+       weather-mensurement: WetherMensurement
 management:
   endpoints:
     web:
