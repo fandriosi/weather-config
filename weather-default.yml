@@ -1,6 +1,12 @@
+dynamodb:
+  tables:
+    alarm-config: AlarmConfig
+    weather-measurement: WeatherMeasurement
+
 db:
   migration:
     location: classpath:db/migration
+
 spring:
   application:
     name: Sistema de estacao meteorologica
@@ -24,6 +30,7 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+
 app:
   name: weather
   tenancy:
@@ -42,9 +49,7 @@ app:
     region: us-east-1
     payload-reserved-keys: idEstacao,timestamp,tenant_id
     payload-ignore-prefixes: ""
-    tables:
-      alarm-config: AlarmConfig
-      weather-measurement: WeatherMeasurement
+
 management:
   endpoints:
     web:
