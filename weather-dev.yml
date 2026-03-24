@@ -45,7 +45,7 @@ app:
     payload-ignore-prefixes: ""
     tables:
       alarm-config: AlarmConfig
-      weather-measurement: WetherMensurement
+      weather-measurement: WeatherMeasurement
   storage:
     type: LOCAL # ou S3 se usar AWS
     local:

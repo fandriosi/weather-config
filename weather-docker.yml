@@ -39,7 +39,7 @@ app:
     payload-ignore-prefixes: ""
     tables:
       alarm-config: AlarmConfig
-      weather-measurement: WetherMensurement
+      weather-measurement: WeatherMeasurement
 
 management:
   endpoints:
