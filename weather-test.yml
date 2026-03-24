@@ -44,8 +44,8 @@ app:
     payload-reserved-keys: idEstacao,timestamp,tenant_id
     payload-ignore-prefixes: ""
     tables:
-       weather-measurement: weather_measurement_test
-       alarm-config: alarm_config_test
+      weather-measurement: weather_measurement_test
+      alarm-config: alarm_config_test
 management:
   endpoints:
     web:

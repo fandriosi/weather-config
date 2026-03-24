@@ -44,8 +44,8 @@ app:
     payload-reserved-keys: idEstacao,timestamp,tenant_id
     payload-ignore-prefixes: ""
     tables:
-       alarm-config: AlarmConfig
-       weather-measurement: WetherMensurement
+      alarm-config: AlarmConfig
+      weather-measurement: WetherMensurement
   storage:
     type: LOCAL # ou S3 se usar AWS
     local:
